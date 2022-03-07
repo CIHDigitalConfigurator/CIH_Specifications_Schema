@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/example.json",
+    "$id": "https://github.com/CIHDigitalConfigurator/CIH_Specifications_Schema/wiki",
     "type": "object",
     "title": "The root schema",
     "description": "The root schema comprises the entire JSON document.",
@@ -54,7 +54,7 @@
             ]
         },
         "FilterConditions": {
-            "$id": "#/properties/FilterConditions",
+            "$id": "#/FilterConditions",
             "type": "array",
             "title": "The FilterConditions schema",
             "description": "An explanation about the purpose of this instance.",
@@ -68,7 +68,7 @@
             }
         },
         "CheckConditions": {
-            "$id": "#/properties/CheckConditions",
+            "$id": "#/CheckConditions",
             "type": "array",
             "title": "The CheckConditions schema",
             "description": "An explanation about the purpose of this instance.",
@@ -78,7 +78,7 @@
             ],
             "additionalItems": true,
             "items": {
-                "$id": "#/properties/CheckConditions/items"
+                "$id": "#/CheckConditions/items"
             }
         }
     },
