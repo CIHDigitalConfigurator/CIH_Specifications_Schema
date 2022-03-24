@@ -1,5 +1,6 @@
 {
    "name": "test-domainCondition-valid",
+   "identifier" : "65421-6854574",
    "domain": { "max" : 5, "min": 1 },
    "propertyName": "someName",
    "propertyValue": 5,

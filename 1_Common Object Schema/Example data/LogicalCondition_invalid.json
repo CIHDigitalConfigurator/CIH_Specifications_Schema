@@ -1,5 +1,6 @@
 {
    "name": "test-logicalCondition-invalid",
+   "identifier" : "65421-6854574",
    "conditions": [{}],
    "booleanOperator": "someInvalidOperator"
 }

@@ -1,0 +1,19 @@
+{
+   "name": "test-specification",
+   "identifier": "000-54564-65468",
+   "filterConditions": [],
+   "checkConditions": [
+      {
+         "name": "test-valueCondition",
+         "identifier": "5649684351",
+         "domain": {
+            "max": 5,
+            "min": 1
+         },
+         "propertyName": "someName",
+         "propertyValue": 5,
+         "includeExtremes": true,
+         "tolerance": 0.1
+      }
+   ]
+}

@@ -1,5 +1,6 @@
 {
    "name": "test-valueCondition",
+   "identifier" : "65421-6854574",
    "propertyName": "someName",
    "propertyValue": { "someValue" : 10 },
    "tolerance": 0.1

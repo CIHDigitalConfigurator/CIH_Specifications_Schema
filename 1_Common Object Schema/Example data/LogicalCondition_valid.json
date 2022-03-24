@@ -1,5 +1,6 @@
 {
    "name": "test-logicalCondition-valid",
+   "identifier" : "65421-6854574",
    "conditions": [{}],
    "booleanOperator": "and"
 }
