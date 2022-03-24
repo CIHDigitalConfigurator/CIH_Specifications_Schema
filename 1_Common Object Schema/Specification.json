@@ -1,0 +1,28 @@
+{
+    "$id": "https://github.com/CIHDigitalConfigurator/CIH_Specifications_Schema/wiki",
+    "type": "object",
+    "title": "Common Configurator Schema: Specification",
+    "description": "Schema applicable to 'Specification' objects, as described by the Common Configurator Framework.",
+    "required": [
+        "filterConditions",
+        "checkConditions"
+    ],
+    "properties": {
+        "filterConditions": {
+			"allOf": [
+					{
+						"$ref": "#/Condition"
+					}
+			],
+			"additionalProperties": true
+		}
+        "checkConditions": {
+			"allOf": [
+					{
+						"$ref": "#/Condition"
+					}
+			],
+			"additionalProperties": true
+		},
+    "additionalProperties": true
+}

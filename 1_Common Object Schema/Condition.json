@@ -1,0 +1,16 @@
+{
+  "$id": "https://github.com/CIHDigitalConfigurator/CIH_Specifications_Schema/wiki",
+  "type": "object",
+  "title": "Common Configurator Schema: Condition",
+  "description": "Schema applicable to 'Condition' objects, as described by the Common Configurator Framework.",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "name": {
+      "description": "The name of the Condition.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

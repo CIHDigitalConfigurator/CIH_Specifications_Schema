@@ -1,0 +1,36 @@
+{
+  "$id": "https://github.com/CIHDigitalConfigurator/CIH_Specifications_Schema/wiki",
+  "type": "object",
+  "title": "Common Configurator Schema: LogicalCondition",
+  "description": "Schema applicable to 'LogicalCondition' objects, as described by the Common Configurator Framework.",
+  "required": [
+    "name",
+    "conditions",
+    "booleanOperator"
+  ],
+  "properties": {
+    "name": {
+      "description": "The name of the Condition.",
+      "type": "string"
+    },
+    "conditions": {
+      "description": "A list of Condition objects that we want to combine through this LogicalCondition. Every condition should return a boolean value for pass/fail.",
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "booleanOperator": {
+      "description": "The boolean logic operator that should be used to combine the results of the conditions included in the 'conditions' property.",
+      "type": "string",
+      "enum": [
+        "and",
+        "or",
+        "not",
+        "xor",
+        "implies"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

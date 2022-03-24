@@ -1,0 +1,64 @@
+// Note:
+// To validata a generic Condition against the "base" Condition schema (which only requires a Name property) and another specific Condition schema, e.g. the LogicalCondition,
+// we could build a combined schema as follows, but this is complex as their relationship is Inheritance and not Composition, for which Json Schema does not allow any mechanism.
+// If the "base" Condition were an interface instead, exposing all required properties of any implementing type, then Json Schema would enable the required validation.
+// Refer to the single Condition schemas instead (e.g. LogicalCondition).
+{
+    "$id": "https://github.com/CIHDigitalConfigurator/CIH_Specifications_Schema/wiki",
+    "definitions": {
+        "Condition": {
+            "$id": "https://github.com/CIHDigitalConfigurator/CIH_Specifications_Schema/wiki",
+            "type": "object",
+            "title": "Common Configurator Schema: Condition",
+            "description": "Schema applicable to 'Condition' objects, as described by the Common Configurator Framework.",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "LogicalCondition": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Condition"
+                }
+            ],
+            "properties": {
+                "conditions": {
+                    "type": "string"
+                },
+                "booleanOperator": {
+                    "type": "string",
+                    "enum": [
+                        "and",
+                        "or",
+                        "not",
+                        "xor",
+                        "implies"
+                    ]
+                }
+            },
+            "additionalProperties": false
+        },
+        "possible-schemas": {
+            "type": "object",
+            "properties": {
+                "allow-any-condition": {
+                    "$ref": "#/definitions/Condition"
+                },
+                "allow-logicalConditions": {
+                    "$ref": "#/definitions/LogicalCondition"
+                }
+            }
+        }
+    },
+    "anyOf": [
+        {
+            "$ref": "#/definitions/possible-schemas"
+        }
+    ]
+}

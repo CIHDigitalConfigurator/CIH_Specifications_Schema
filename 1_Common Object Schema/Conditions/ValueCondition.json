@@ -1,0 +1,37 @@
+{
+  "$id": "https://github.com/CIHDigitalConfigurator/CIH_Specifications_Schema/wiki",
+  "type": "object",
+  "title": "Common Configurator Schema: ValueCondition",
+  "description": "Schema applicable to 'ValueCondition' objects, as described by the Common Configurator Framework.",
+  "required": [
+    "name",
+    "propertyName",
+    "propertyValue"
+  ],
+  "properties": {
+    "name": {
+      "description": "The name of the Condition.",
+      "type": "string"
+    },
+    "propertyName": {
+      "description": "The name of the property of the object that will be subject to this condition.",
+      "type": "string"
+    },
+    "propertyValue": {
+      "description": "The value of the property of the object that will be subject to this condition.",
+      "type": "object"
+    },
+    "comparison": {
+      "description": "The type of comparison that the value of the selected property of the object will be subject to.",
+      "type": "string",
+      "enum": [
+        "EqualTo",
+        "LessThan",
+        "LessThanOrEqualTo",
+        "GreaterThanOrEqualTo",
+        "GreaterThan"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

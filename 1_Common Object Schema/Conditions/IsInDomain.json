@@ -1,0 +1,48 @@
+{
+  "$id": "https://github.com/CIHDigitalConfigurator/CIH_Specifications_Schema/wiki",
+  "type": "object",
+  "title": "Common Configurator Schema: IsInDomain Condition",
+  "description": "Schema applicable to 'IsInDomain' Condition objects, as described by the Common Configurator Framework.",
+  "required": [
+    "name",
+    "domain",
+    "propertyName",
+    "propertyValue"
+  ],
+  "properties": {
+    "name": {
+      "description": "The name of the Condition.",
+      "type": "string"
+    },
+    "propertyName": {
+      "description": "The name of the property of the object that will be subject to this condition.",
+      "type": "string"
+    },
+    "propertyValue": {
+      "description": "The value of the property of the object that will be subject to this condition.",
+      "type": "number"
+    },
+    "domain": {
+      "description": "The domain that must include the value of the property of the object.",
+      "type": "object",
+      "required" : ["max", "min"],
+      "properties": {
+        "max": {
+          "type": "number"
+        },
+        "min": {
+          "type": "number"
+        }
+      }
+    },
+    "tolerance": {
+      "description": "The tolerance to be used in the comparison.",
+      "type": "number"
+    },
+    "includeExtremes": {
+      "description": "The tolerance to be used in the comparison.",
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}
