@@ -5,12 +5,17 @@
   "description": "Schema applicable to 'LogicalCondition' objects, as described by the Common Configurator Framework.",
   "required": [
     "name",
+    "identifier",
     "conditions",
     "booleanOperator"
   ],
   "properties": {
     "name": {
       "description": "The name of the Condition.",
+      "type": "string"
+    },
+    "identifier": {
+      "description": "The identifier of the Condition.",
       "type": "string"
     },
     "conditions": {
@@ -31,6 +36,5 @@
         "implies"
       ]
     }
-  },
-  "additionalProperties": true
+  }
 }

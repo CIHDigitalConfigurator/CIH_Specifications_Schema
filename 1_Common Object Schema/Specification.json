@@ -1,28 +1,55 @@
 {
-    "$id": "https://github.com/CIHDigitalConfigurator/CIH_Specifications_Schema/wiki",
-    "type": "object",
-    "title": "Common Configurator Schema: Specification",
-    "description": "Schema applicable to 'Specification' objects, as described by the Common Configurator Framework.",
-    "required": [
-        "filterConditions",
-        "checkConditions"
-    ],
-    "properties": {
-        "filterConditions": {
-			"allOf": [
-					{
-						"$ref": "#/Condition"
-					}
-			],
-			"additionalProperties": true
+	"$id": "https://github.com/CIHDigitalConfigurator/CIH_Specifications_Schema/wiki",
+	"type": "object",
+	"title": "Common Configurator Schema: Specification",
+	"description": "Schema applicable to 'Specification' objects, as described by the Common Configurator Framework.",
+	"required": [
+		"identifier",
+		"filterConditions",
+		"checkConditions"
+	],
+	"Condition": {
+		"required": [
+			"identifier",
+			"name"
+		],
+		"properties": {
+			"name": {
+				"description": "The name of the Condition.",
+				"type": "string"
+			  },
+			  "identifier": {
+				"description": "The identifier of the Condition.",
+				"type": "string"
+			  }
 		}
-        "checkConditions": {
-			"allOf": [
-					{
-						"$ref": "#/Condition"
-					}
-			],
-			"additionalProperties": true
+	},
+	"properties": {
+		"name": {
+			"description": "The name of the Specification.",
+			"type": "string"
 		},
-    "additionalProperties": true
+		"identifier": {
+			"description": "The identifier of the Specification.",
+			"type": "string"
+		},
+		"description": {
+			"description": "The description of the Specification.",
+			"type": "string"
+		},
+		"filterConditions": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"$ref": "#/Condition"
+			}
+		},
+		"checkConditions": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"$ref": "#/Condition"
+			}
+		}
+	}
 }

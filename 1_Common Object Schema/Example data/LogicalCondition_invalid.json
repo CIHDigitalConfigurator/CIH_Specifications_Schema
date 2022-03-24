@@ -1,0 +1,5 @@
+{
+   "name": "test-logicalCondition-invalid",
+   "conditions": [{}],
+   "booleanOperator": "someInvalidOperator"
+}

@@ -1,0 +1,8 @@
+{
+   "name": "test-domainCondition-valid",
+   "domain": { "max" : 5, "min": 1 },
+   "propertyName": "someName",
+   "propertyValue": 5,
+   "includeExtremes": true,
+   "tolerance": 0.1
+}

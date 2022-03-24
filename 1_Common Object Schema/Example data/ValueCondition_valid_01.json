@@ -1,0 +1,6 @@
+{
+   "name": "test-valueCondition",
+   "propertyName": "someName",
+   "propertyValue": { "someValue" : 10 },
+   "tolerance": 0.1
+}

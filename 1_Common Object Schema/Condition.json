@@ -4,13 +4,19 @@
   "title": "Common Configurator Schema: Condition",
   "description": "Schema applicable to 'Condition' objects, as described by the Common Configurator Framework.",
   "required": [
+    "identifier",
     "name"
   ],
   "properties": {
-    "name": {
-      "description": "The name of the Condition.",
-      "type": "string"
+    "properties": {
+      "name": {
+        "description": "The name of the Condition.",
+        "type": "string"
+      },
+      "identifier": {
+        "description": "The identifier of the Condition.",
+        "type": "string"
+      }
     }
-  },
-  "additionalProperties": true
+  }
 }
